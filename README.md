@@ -1,2 +1,2 @@
 # mc-server
-My minecraft server.
+Server utilities for Minecraft.

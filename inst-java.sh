@@ -7,10 +7,9 @@ case $1 in
     ;;
 esac
 
-mkdir -p ./.cache ./java
-touch ./.cache/jre$1.tgz
+mkdir -p ./.cache ./java &&
+    touch ./.cache/jre$1.tgz
 wget $url -O ./.cache/jre$1.tgz &&
     tar -zxvf ./.cache/jre$1.tgz -C ./.java &&
-    mv ./java/zulu$1* ./java/$1 ||
-    echo Unable to download Java $1. ||
+    mv ./java/zulu$1* ./java/$1 &&
     echo Java $1 successfully installed.

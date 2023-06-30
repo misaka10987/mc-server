@@ -7,7 +7,7 @@ case $1 in
     ;;
 esac
 
-mkdir -p ./forge-1.12.2 &&
-    touch ./forge-1.12.2/server.jar
-wget $url -O ./forge-1.12.2/server.jar &&
+mkdir -p ./$1 &&
+    touch ./$1/server.jar
+wget $url -O ./$1/server.jar &&
     echo Minecraft server for $1 successfully installed.
