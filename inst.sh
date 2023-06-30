@@ -1,12 +1,15 @@
 #!/bin/bash
-
+source ./inst-java.sh
 case $1 in
-"forge-1.12.2") url="https://catserver.moe/download/universal" ;;
+"forge-1.12.2")
+    java=8
+    ;;
 *)
     echo inst.sh: Invalid version selection: $1
     ;;
 esac
-
+url="https://github.com/misaka10987/mc-server/releases/download/download/$1"
+getjava $java
 mkdir -p ./$1 &&
     touch ./$1/server.jar
 wget $url -O ./$1/server.jar &&
