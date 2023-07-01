@@ -18,7 +18,10 @@ checkjava() {
     if (($# == 1)); then
         echo $version && return 0
     fi
-    if [[ $version == $2* ]]; then
+    if [[ $2 == 8 && $version == "1.8"* ]]; then
+        echo true && return 0
+    fi
+    if [ $version == $2* ]; then
         echo true
     else
         echo false
