@@ -52,6 +52,7 @@ fi
 
 touch ./$1/launch.sh
 echo "#!/bin/bash">./$1/launch.sh
-echo "source ../config.sh">./$1/launch.sh
-echo "java=$java_version">./$1/launch.sh
-echo "\"../java/\$java/bin/java\" -jar -Xmx\$memory ./server.jar  ">./$1/launch.sh
+echo "source ../config.sh">>./$1/launch.sh
+echo "java=$java_version">>./$1/launch.sh
+echo "\"../java/\$java/bin/java\" -jar -Xmx\${memory}M ./server.jar  ">>./$1/launch.sh
+chmod +x ./$1/launch.sh
