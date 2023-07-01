@@ -26,7 +26,7 @@ esac
 if [ -z java ]; then
     mkdir -p ./java
     getjava ./java $java_version
-elif [$(checkjava $java) == 0]; then
+elif [ $(checkjava $java) == 0 ]; then
     echo "inst.sh: \"$java\" has not java installation!"
     exit 1
 elif !(`checkjava $java $java_version`); then
