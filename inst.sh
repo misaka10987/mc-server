@@ -23,7 +23,7 @@ case $1 in
     ;;
 esac
 
-if [ -z java ]; then
+if [ -z $java ]; then
     mkdir -p ./java
     getjava ./java $java_version
 elif [ $(checkjava $java) == 0 ]; then
