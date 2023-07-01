@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./inst-java.sh
+source ./getjava.sh
 case $1 in
 "forge-1.12.2")
     java=8
