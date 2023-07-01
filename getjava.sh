@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # checkjava <dir>
 #   Checks version of java installed, 0 if not exist.
 # checkjava <dir> <version>
