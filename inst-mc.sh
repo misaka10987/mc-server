@@ -27,7 +27,6 @@ esac
 
 mkdir -p "${HOME}/.mc-server/.java" "./mc-server"
 ln -s "${HOME}/.mc-server"
-mv "./.mc-server" "./mc-server"
 
 if [ -z "$java" ]; then
     getjava "${HOME}/.mc-server/.java" $java_version
