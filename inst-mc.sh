@@ -45,7 +45,7 @@ echo "inst-mc.sh: java is ready."
 mkdir -p "~/.mc-server/$1"
 ln -s "~/.mc-server/.java/${java_version}/bin/java" "~/.mc-server/$1/java"
 touch "~/.mc-server/$1/server.jar"
-wget "${src}/$1.jar" -O "./$1/server.jar"
+wget "${src}/$1.jar" -O "~/.mc-server/$1/server.jar"
 echo "inst-mc.sh: minecraft server \"$1\" successfully installed."
 
 if $frp; then
