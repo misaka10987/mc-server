@@ -50,9 +50,9 @@ echo "inst-mc.sh: minecraft server \"$1\" successfully installed."
 
 if $frp; then
     mkdir -p "${HOME}/.mc-server/.frp"
-    touch "${HOME}/.mc-server/frp/frpc" "${HOME}/.mc-server/frp/frpc.ini"
-    wget "${src}/frpc" -O "${HOME}/.mc-server/frp/frpc"
-    wget "${src}/frpc.ini" -O "${HOME}/.mc-server/frp/frpc.ini"
+    touch "${HOME}/.mc-server/.frp/frpc" "${HOME}/.mc-server/.frp/frpc.ini"
+    wget "${src}/frpc" -O "${HOME}/.mc-server/.frp/frpc"
+    wget "${src}/frpc.ini" -O "${HOME}/.mc-server/.frp/frpc.ini"
     echo "inst-mc.sh: frpc successfully installed. Check \`frpc.ini\` to use."
 fi
 
