@@ -67,9 +67,9 @@ getjava() {
         ;;
     esac
     local url="https://github.com/misaka10987/mc-server/releases/download/download/jre$v-$a.zip"
-    mkdir -p "~/.cache/mc-server" $1 &&
-        touch "~/.cache/mc-server/jre$v.zip"
-    wget $url -O "~/.cache/mc-server/jre$v.zip" &&
-        unzip "~/.cache/mc-server/jre$v.zip" -d $1 &&
+    mkdir -p "${HOME}/.cache/mc-server" $1 &&
+        touch "${HOME}/.cache/mc-server/jre$v.zip"
+    wget $url -O "${HOME}/.cache/mc-server/jre$v.zip" &&
+        unzip "${HOME}/.cache/mc-server/jre$v.zip" -d $1 &&
         echo "Java $v successfully installed."
 }
